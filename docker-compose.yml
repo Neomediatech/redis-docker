@@ -6,7 +6,7 @@ services:
     command: ["redis-server", "--appendonly", "yes"]
     restart: always
     ports:
-      - 8080:80
+      - 6380:6379
     volumes:
       - /srv/data/docker/containers/redis-app/data:/data
     environment:
