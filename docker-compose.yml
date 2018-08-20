@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  redis:
+    image: redis:alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - /srv/data/docker/containers/redis-app/data:/var/lib/mysql
+    environment:
+      TZ: Europe/Rome
