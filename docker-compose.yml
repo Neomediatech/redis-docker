@@ -8,6 +8,6 @@ services:
     ports:
       - 8080:80
     volumes:
-      - /srv/data/docker/containers/redis-app/data:/var/lib/mysql
+      - /srv/data/docker/containers/redis-app/data:/data
     environment:
       TZ: Europe/Rome
